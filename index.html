@@ -152,8 +152,30 @@ footer{background:var(--m4d-black);border-top:1px solid rgba(255,255,255,.08);pa
 .hero-content .btn{animation:fadeUp .5s .3s ease both}
 .hero-right{animation:fadeUp .6s .2s ease both}
 
+/* WORK / PROJECTS */
+.work{background:#fff;border-top:1px solid var(--m4d-rule);border-bottom:1px solid var(--m4d-rule)}
+.work-feature{display:grid;grid-template-columns:1.6fr 1fr;gap:var(--space-6);align-items:stretch;margin-bottom:var(--space-7)}
+.work-img{position:relative;overflow:hidden;background:var(--m4d-light)}
+.work-img img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 400ms ease}
+.work-card:hover .work-img img,.work-feature:hover .work-img img{transform:scale(1.02)}
+.work-feature .work-img{aspect-ratio:4/3}
+.work-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-top:var(--space-3)}
+.work-thumbs .work-img{aspect-ratio:16/9}
+.work-feature-info{display:flex;flex-direction:column;justify-content:center}
+.work-tag{font-size:var(--text-label);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--m4d-primary);margin-bottom:var(--space-2)}
+.work-title{font-size:var(--text-h3);font-weight:600;letter-spacing:-.01em;margin-bottom:var(--space-1)}
+.work-feature-info .work-title{font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400}
+.work-loc{font-size:var(--text-small);color:var(--m4d-muted);margin-bottom:var(--space-3)}
+.work-desc{font-size:var(--text-small);color:var(--m4d-mid);line-height:1.7;margin-bottom:var(--space-4)}
+.work-specs{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3) var(--space-4);border-top:1px solid var(--m4d-rule);padding-top:var(--space-4)}
+.work-spec-label{font-size:var(--text-label);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--m4d-muted)}
+.work-spec-value{font-size:var(--text-small);color:var(--m4d-text);font-weight:500}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
+.work-card .work-img{aspect-ratio:16/10;margin-bottom:var(--space-4)}
 /* RESPONSIVE */
 @media(max-width:900px){
+  .work-feature,.work-grid{grid-template-columns:1fr}
+  .work-feature .work-img{aspect-ratio:16/10}
   .hero{grid-template-columns:1fr;min-height:auto}
   .hero-content{padding:calc(64px + var(--space-7)) var(--gutter) var(--space-6);max-width:100%}
   .hero-right{padding:var(--space-6) var(--gutter)}
@@ -178,6 +200,7 @@ footer{background:var(--m4d-black);border-top:1px solid rgba(255,255,255,.08);pa
     <li><a href="#why">Why Us</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
     <li><a href="#team">Team</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -355,12 +378,12 @@ footer{background:var(--m4d-black);border-top:1px solid rgba(255,255,255,.08);pa
       <div style="display:grid;grid-template-columns:1fr 2fr;gap:var(--space-7);align-items:start">
         <div>
           <div style="font-size:var(--text-small);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--m4d-primary);margin-bottom:var(--space-3)">Predevelopment Intelligence</div>
-          <h3 style="font-size:var(--text-h3);font-weight:600;margin-bottom:var(--space-4);line-height:1.25">M4Di™ OI Tool — Built-in from day one.</h3>
+          <h3 style="font-size:var(--text-h3);font-weight:600;margin-bottom:var(--space-4);line-height:1.25">M4Di™ Predevelopment Intelligence — Built-in from day one.</h3>
           <p style="font-size:var(--text-small);color:var(--m4d-muted);line-height:var(--leading-body)">Every M4D engagement benefits from in-house predevelopment cost intelligence. We produce order-of-magnitude ROM estimates, capital stack analysis, and feasibility modeling before a single line is drawn — so you make decisions with real cost data, not assumptions.</p>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)">
           <div style="border-left:2px solid var(--m4d-primary);padding-left:var(--space-4)">
-            <div style="font-size:var(--text-small);font-weight:600;color:var(--m4d-ink);margin-bottom:6px">OI Tool™ &amp; ALDi Gates</div>
+            <div style="font-size:var(--text-small);font-weight:600;color:var(--m4d-ink);margin-bottom:6px">ROM Estimating &amp; ALDi™ Gates</div>
             <p style="font-size:13px;color:var(--m4d-muted);line-height:1.6">CSI-structured ROM estimates using BLS regional labor data. G0 order-of-magnitude through G4 closeout. Confidence levels stated explicitly at every gate.</p>
           </div>
           <div style="border-left:2px solid var(--m4d-primary);padding-left:var(--space-4)">
@@ -368,7 +391,7 @@ footer{background:var(--m4d-black);border-top:1px solid rgba(255,255,255,.08);pa
             <p style="font-size:13px;color:var(--m4d-muted);line-height:1.6">NMTC, LIHTC, CDFI, and grant financing structures modeled at feasibility stage. Built for nonprofit and mission-owner community development projects.</p>
           </div>
           <div style="border-left:2px solid var(--m4d-primary);padding-left:var(--space-4)">
-            <div style="font-size:var(--text-small);font-weight:600;color:var(--m4d-ink);margin-bottom:6px">ALDDB™ Benchmarks</div>
+            <div style="font-size:var(--text-small);font-weight:600;color:var(--m4d-ink);margin-bottom:6px">Regional Cost Benchmarks</div>
             <p style="font-size:13px;color:var(--m4d-muted);line-height:1.6">Proprietary closed-project cost database. Mid-Atlantic community development benchmarks including CLT/SIP hybrid system costs — first in the regional market.</p>
           </div>
           <div style="border-left:2px solid var(--m4d-primary);padding-left:var(--space-4)">
@@ -377,6 +400,57 @@ footer{background:var(--m4d-black);border-top:1px solid rgba(255,255,255,.08);pa
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="container">
+    <span class="label">Selected Work</span>
+    <div class="divider"></div>
+    <h2>Built ideas, not just drawings.</h2>
+
+    <!-- FEATURED PROJECT — to rotate the feature, swap this block with a card below -->
+    <div class="work-feature">
+      <div>
+        <div class="work-img"><img src="assets/projects/claymont-exterior.jpg" alt="Exterior rendering of the Claymont Hybrid Townhomes — four attached CLT/SIP panelized townhomes on a Wilmington residential street" loading="lazy"></div>
+        <div class="work-thumbs">
+          <div class="work-img"><img src="assets/projects/claymont-interior.jpg" alt="Interior rendering of a Claymont Hybrid Townhome living space with exposed timber ceiling" loading="lazy"></div>
+          <div class="work-img"><img src="assets/projects/claymont-roof.jpg" alt="Rendering of the Claymont Hybrid Townhomes roof deck level" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="work-feature-info">
+        <p class="work-tag">Featured — Residential · CLT/SIP Hybrid · In Construction</p>
+        <h3 class="work-title">Claymont Hybrid Townhomes</h3>
+        <p class="work-loc">N. Claymont Street, Wilmington, DE</p>
+        <p class="work-desc">Delaware's first CLT/SIP hybrid residential project — four attached townhomes pairing cross-laminated timber party walls with structural insulated panel envelopes on a continuous masonry foundation. Foundation permit approved May 2026; panel installation underway summer 2026. Developed with L.E.E.P., Inc. and delivered to market as The Forward Home.</p>
+        <div class="work-specs">
+          <div><div class="work-spec-label">Units</div><div class="work-spec-value">4 Attached</div></div>
+          <div><div class="work-spec-label">System</div><div class="work-spec-value">CLT / SIP Hybrid</div></div>
+          <div><div class="work-spec-label">Priced From</div><div class="work-spec-value">$203K</div></div>
+          <div><div class="work-spec-label">Occupancy</div><div class="work-spec-value">Fall 2026</div></div>
+          <div><div class="work-spec-label">Delivery</div><div class="work-spec-value">Panelized Off-Site</div></div>
+          <div><div class="work-spec-label">Status</div><div class="work-spec-value">In Construction</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-card">
+        <div class="work-img"><img src="assets/projects/soulfully-conscious.png" alt="Exterior rendering of Soulfully Conscious Community Cafe — two-story mixed-use corner building with ground-floor cafe and large storefront glazing in Wilmington" loading="lazy"></div>
+        <p class="work-tag">Mixed Use · New Construction · Permit Phase</p>
+        <h3 class="work-title">Soulfully Conscious Community Cafe</h3>
+        <p class="work-loc">38 E. 23rd Street, Wilmington, DE</p>
+        <p class="work-desc">A neighborhood-corner community building: ground-floor cafe and market with a rooftop urban-farm concept and two residential units above.</p>
+      </article>
+      <article class="work-card">
+        <div class="work-img"><img src="assets/projects/lamott-daycare.png" alt="Exterior rendering of the LaMott Daycare early learning center" loading="lazy"></div>
+        <p class="work-tag">Adaptive Reuse · Education · Predevelopment</p>
+        <h3 class="work-title">LaMott Daycare</h3>
+        <p class="work-loc">LaMott, PA</p>
+        <p class="work-desc">A new two-story early learning center designed as an adaptive reuse of an existing foundation footprint. Schematic design in hand; the project is now assembling its funding stack to advance.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -489,9 +563,9 @@ footer{background:var(--m4d-black);border-top:1px solid rgba(255,255,255,.08);pa
   <strong>M4Di™ — Merge 4 Development Institute</strong>,
   a predevelopment cost intelligence platform serving nonprofit,
   CDFI, and mission-driven developers in the Mid-Atlantic region.
-  M4Di currently operates as a program of M4D under fiscal sponsorship
-  of Central Baptist CDC, Wilmington, Delaware.<br>
-  <span style="color:#196b23;">M4Di™ &nbsp;·&nbsp; ALDi™ &nbsp;·&nbsp; FeasOps™ &nbsp;·&nbsp; M4Di.Oi™ &nbsp;·&nbsp; ALDDB™</span>
+  M4Di — Merge 4 Development Institute — is a Merge 4 Design LLC
+  initiative currently in formation. Wilmington, Delaware.<br>
+  <span style="color:#196b23;">M4Di™ &nbsp;·&nbsp; ALDi™ &nbsp;·&nbsp; FeasOps™</span>
   &nbsp;— Draft marks. © 2026 Merge 4 Design LLC d/b/a M4Di.
   All marks pending legal confirmation.
 </div>
